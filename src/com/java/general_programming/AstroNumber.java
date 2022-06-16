@@ -44,11 +44,9 @@ public class AstroNumber {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int j = 0;
-        while(n != 1 && j<100)
-        {
+        while(n != 1 && j<100) {
             int sum = 0;
-            while(n!=0)
-            {
+            while(n!=0) {
                 int rem = n % 10;
                 sum += (int)Math.pow(rem, 2);
                 n /= 10;

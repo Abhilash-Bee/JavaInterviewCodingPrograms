@@ -50,10 +50,8 @@ public class CP_Friends {
         int n = scan.nextInt();
 
         int[][] ar = new int[n][3];
-        for(int i=0;i<n;i++)
-        {
-            for(int j=0;j<3;j++)
-            {
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<3;j++) {
                 ar[i][j]=scan.nextInt();
             }
         }
@@ -62,13 +60,10 @@ public class CP_Friends {
 
     }
 
-    static int friends(int n, int[][] ar)
-    {
+    static int friends(int n, int[][] ar) {
         int res = 0, count = 0;
-        for(int i=0;i<n;i++)
-        {
-            for(int j=0;j<3;j++)
-            {
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<3;j++) {
                 if(ar[i][j] == 1)
                     count++;
             }

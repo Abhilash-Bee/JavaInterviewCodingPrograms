@@ -18,8 +18,7 @@ import java.util.Scanner;
 
 public class AptitudePattern {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
@@ -32,16 +31,13 @@ public class AptitudePattern {
 		/*ArrayList<Integer> al = new ArrayList<>();
 		al.add(1);
 		System.out.println(al);
-		for(int i=0;i<n-1;i++)
-		{
+		for(int i=0;i<n-1;i++) {
 			ArrayList<Integer> bl = new ArrayList<>();
 			int count=1;
-			for(int j=0;j<al.size()-1;j++)
-			{
+			for(int j=0;j<al.size()-1;j++) {
 				if(al.get(j)==al.get(j+1))
 					count++;
-				else
-				{
+				else {
 					bl.add(count);
 					bl.add(al.get(j));
 					count=1;
@@ -58,16 +54,13 @@ public class AptitudePattern {
 
         String old = "1";
         System.out.println(old);
-        for(int i=0;i<n-1;i++)
-        {
+        for(int i=0;i<n-1;i++) {
             String fresh = "";
             int count = 1;
-            for(int j=0;j<old.length()-1;j++)
-            {
+            for(int j=0;j<old.length()-1;j++) {
                 if(old.charAt(j) == old.charAt(j+1))
                     count++;
-                else
-                {
+                else {
                     fresh += count;
                     fresh += old.charAt(j);
                     count=1;
@@ -77,7 +70,6 @@ public class AptitudePattern {
             fresh += old.charAt(old.length()-1);
             System.out.println(fresh);
             old = fresh;
-            fresh="";
         }
 
     }
