@@ -41,17 +41,14 @@ public class CubicSumExist {
         int n = scan.nextInt();
 
         int[] ar = new int[n];
-        for(int i=0; i<n; i++)
+        for (int i = 0; i < n; i++)
             ar[i] = scan.nextInt();
 
-        flag: for(int i=0;i<n;i++)
-        {
-            for(int j=1; (int)Math.pow(j, 3) <= ar[i]; j++)
-            {
-                for(int k=j+1; (int)Math.pow(k, 3) <= ar[i]; k++)
-                {
-                    if((int)Math.pow(j, 3) + (int)Math.pow(k, 3) == ar[i])
-                    {
+        flag:
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; (int) Math.pow(j, 3) <= ar[i]; j++) {
+                for (int k = j + 1; (int) Math.pow(k, 3) <= ar[i]; k++) {
+                    if ((int) Math.pow(j, 3) + (int) Math.pow(k, 3) == ar[i]) {
                         System.out.println(ar[i] + " is a good number");
                         continue flag;
                     }
