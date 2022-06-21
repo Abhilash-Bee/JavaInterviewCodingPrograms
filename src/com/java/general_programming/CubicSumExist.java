@@ -57,5 +57,4 @@ public class CubicSumExist {
             System.out.println(ar[i] + " is not a good number");
         }
     }
-
 }
