@@ -1,5 +1,26 @@
 package com.java.array_programming;
 
+/*
+ * Playing with Array
+ *
+ * Sum of all elements in the Array and product of sum and n.
+ *
+ * Sample Input:
+ * 5
+ * 1 2 3 4 5
+ *
+ * Sample Output:
+ * 75
+ *
+ * Explanation:
+ *
+ * sum = 1+2+3+4+5 = 15
+ *
+ * sum * n = result
+ * 15 * 5 = 75
+ *
+ */
+
 import java.util.Scanner;
 
 public class PlayingWithArray {

@@ -3,6 +3,23 @@ package com.java.string_programming;
 /*
  * Fractions To Mixed Fraction
  *
+ * Sample input 1
+ * 9.5
+ *
+ * Sample output 1
+ * 9 1/2
+ *
+ * Sample input 2
+ * 0.25
+ *
+ * Sample output 2
+ * 0 1/4
+ *
+ * Sample input 3
+ * 4.75
+ *
+ * Sample output 3
+ * 4 3/4
  *
  */
 

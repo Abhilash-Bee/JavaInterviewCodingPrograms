@@ -1,5 +1,22 @@
 package com.java.general_programming;
 
+/*
+ * Number Pattern 4
+ *
+ * Sample Input:
+ *
+ * 4
+ *
+ * Sample Output:
+ *
+ * 4
+ * 8 18
+ * 12 27 48
+ * 16 36 64 100
+ * 20 45 80 125 180
+ *
+ */
+
 import java.util.Scanner;
 
 public class NumberPattern4 {
