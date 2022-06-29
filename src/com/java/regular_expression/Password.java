@@ -7,34 +7,26 @@ import java.util.regex.Pattern;
 public class Password {
 
     private String password;
-    private Pattern upperCaseCharacters;
-    private Pattern lowerCaseCharacters;
-    private Pattern numberCase;
-    private Pattern specialCase;
-
-    private Matcher upperCaseMatcher;
-    Matcher lowerCaseMatcher;
-    Matcher numberMatcher;
-    Matcher specialMatcher;
+    private Pattern upperCaseCharacters = Pattern.compile("[A-Z]");
+    private Pattern lowerCaseCharacters = Pattern.compile("[a-z]");
+    private Pattern numberCase = Pattern.compile("\\d");
+    private Pattern specialCase = Pattern.compile("\\W");
 
     public Password(String password) {
         if(password.length() > 8 && password.length() < 15)
             this.password = password;
         else
             this.password = "null";
-        this.upperCaseCharacters = Pattern.compile("[A-Z]");
-        this.lowerCaseCharacters = Pattern.compile("[a-z]");
-        this.numberCase = Pattern.compile("\\d");
-        this.specialCase = Pattern.compile("\\W");
-        this.upperCaseMatcher = upperCaseCharacters.matcher(this.password);
-        this.lowerCaseMatcher = lowerCaseCharacters.matcher(this.password);
-        this.numberMatcher = numberCase.matcher(this.password);
-        this.specialMatcher = specialCase.matcher(this.password);
     }
     private static boolean checkPassword(Password password) {
         if(!password.password.equals("null")) {
-            return (password.upperCaseMatcher.find() && password.lowerCaseMatcher.find() &&
-                password.numberMatcher.find() && password.specialMatcher.find());
+            Matcher upperCaseMatcher = password.upperCaseCharacters.matcher(password.password);
+            Matcher lowerCaseMatcher = password.lowerCaseCharacters.matcher(password.password);
+            Matcher numberMatcher = password.numberCase.matcher(password.password);
+            Matcher specialMatcher = password.specialCase.matcher(password.password);
+
+            return (upperCaseMatcher.find() && lowerCaseMatcher.find() &&
+                numberMatcher.find() && specialMatcher.find());
         }
         return false;
     }
