@@ -68,21 +68,18 @@ public class Short_ID_Debug {
         int n = scan.nextInt();
 
         int[] ar = new int[n];
-        for(int i=0;i<n;i++)
+        for (int i = 0; i < n; i++)
             ar[i] = scan.nextInt();
 
         System.out.println(shortID(n, ar));
 
     }
 
-    static int shortID(int n, int[] ar)
-    {
+    static int shortID(int n, int[] ar) {
         int k = 2;
-        while(true)
-        {
+        while (true) {
             String str = "";
-            for(int i=0;i<n;i++)
-            {
+            for (int i = 0; i < n; i++) {
                 int temp = ar[i] % k;
                 str += temp;
                 str += ",";
@@ -90,15 +87,14 @@ public class Short_ID_Debug {
             //System.out.println(str);
             int i;
             String[] star = str.split(",");
-            out : for(i=0;i<star.length-1;i++)
-            {
-                for(int j=i+1;j<star.length;j++)
-                {
-                    if(star[i].equals(star[j]))
+            out:
+            for (i = 0; i < star.length - 1; i++) {
+                for (int j = i + 1; j < star.length; j++) {
+                    if (star[i].equals(star[j]))
                         break out;
                 }
             }
-            if(i != star.length-1)
+            if (i != star.length - 1)
                 k++;
             else
                 return k;
